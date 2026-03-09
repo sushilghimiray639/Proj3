@@ -1,0 +1,206 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lora", serif;
+  background-image: url("https://cdn.britannica.com/80/157580-004-FFB75F13.jpg"); /* squirrel image */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: #fff;
+  line-height: 1.6;
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(90, 50, 30, 0.65); /* DARKER brown overlay */
+  z-index: -1;
+}
+
+header {
+  text-align: center;
+  padding: 25px 10px;
+  background-color: rgba(70, 40, 20, 0.9);
+}
+
+header h1 {
+  font-family: "Emblema One", cursive;
+  font-size: 2.2rem;
+}
+
+header h3 {
+  font-weight: normal;
+  margin-top: 5px;
+  color: #f6eee4;
+}
+
+/* DESKTOP NAVIGATION */
+nav.tab-desk {
+  background-color: rgba(90, 55, 30, 0.9);
+}
+
+nav.tab-desk ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+nav.tab-desk li {
+  padding: 15px 25px;
+}
+
+nav.tab-desk a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav.tab-desk a:hover {
+  color: #f6eee4;
+}
+
+/* MOBILE NAVIGATION */
+.mobile-nav {
+  display: none;
+  flex-direction: column;
+  background-color: rgba(90, 55, 30, 0.9);
+  padding: 10px;
+}
+
+.mobile-nav .nav-icon {
+  font-size: 2rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+#menu-links {
+  display: none;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+#menu-links a {
+  color: #fff;
+  padding: 8px 0;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+main {
+  max-width: 850px;
+  margin: 50px auto;
+  padding: 35px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+main h2,
+main h3 {
+  color: #f6eee4;
+  margin-bottom: 15px;
+}
+
+main p,
+main li {
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+main ul {
+  margin-left: 20px;
+}
+
+.video-container {
+  display: flex;
+  justify-content: center;
+  margin: 25px 0;
+}
+
+iframe {
+  width: 100%;
+  max-width: 600px;
+  height: 340px;
+  border-radius: 10px;
+  border: none;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  color: #fff;
+}
+
+table th,
+table td {
+  border: 1px solid #fff;
+  padding: 12px;
+  text-align: left;
+}
+
+table th {
+  background-color: rgba(70, 40, 20, 0.9);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form label {
+  margin-top: 15px;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #f6eee4;
+}
+
+form input,
+form textarea,
+form button {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #fff;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+form button {
+  margin-top: 20px;
+  background-color: rgba(70, 40, 20, 0.9);
+  font-weight: bold;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: rgba(50, 30, 15, 0.9);
+}
+
+.faq-answer {
+  display: none;
+  margin-left: 15px;
+  margin-bottom: 15px;
+  cursor: default;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(70, 40, 20, 0.9);
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  nav.tab-desk {
+    display: none;
+  }
+  .mobile-nav {
+    display: flex;
+  }
+}
