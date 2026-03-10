@@ -217,19 +217,21 @@ footer .social-icon:hover {
 }
 .skip-link {
   position: absolute;
-  top: -40px; 
+  top: -40px;
   left: 0;
   background: rgba(90, 50, 30, 0.95);
-  color: #fff;
+  color: #fff;           
+  text-decoration: none; 
   padding: 8px 15px;
   z-index: 100;
-  text-decoration: none;
   font-weight: bold;
   border-radius: 4px;
   transition: top 0.3s;
 }
+
 .skip-link:focus {
-  top: 10px; 
+  top: 10px;
+  outline: 3px solid #f6eee4; 
 }
 
 @media (max-width: 768px) {
