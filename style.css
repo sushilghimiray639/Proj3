@@ -215,23 +215,26 @@ footer .social-icon:hover {
   transform: scale(1.1);     
   filter: brightness(1.2);   
 }
+
 .skip-link {
   position: absolute;
-  top: -40px;
-  left: 0;
-  background: rgba(90, 50, 30, 0.95);
-  color: #fff;           
-  text-decoration: none; 
+  top: -50px;                
+  left: 10px;
+  background: rgba(90, 50, 30, 0.95); 
+  color: #fff;                
+  text-decoration: none;      
   padding: 8px 15px;
-  z-index: 100;
   font-weight: bold;
   border-radius: 4px;
-  transition: top 0.3s;
+  z-index: 1000;
+  transition: top 0.3s ease, opacity 0.3s ease;
+  opacity: 0;                
 }
 
 .skip-link:focus {
-  top: 10px;
-  outline: 3px solid #f6eee4; 
+  top: 10px;                   
+  opacity: 1;                   
+  outline: 3px solid #f6eee4;  
 }
 
 @media (max-width: 768px) {
