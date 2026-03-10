@@ -204,3 +204,21 @@ footer {
     display: flex;
   }
 }
+footer .social-icon {
+  width: 40px;               
+  margin: 0 10px;            
+  vertical-align: middle;
+  transition: transform 0.2s, filter 0.2s; 
+}
+
+footer .social-icon:hover {
+  transform: scale(1.1);     
+  filter: brightness(1.2);   
+}
+
+@media (max-width: 480px) {
+  footer .social-icon {
+    width: 30px;
+    margin: 0 8px;
+  }
+}
