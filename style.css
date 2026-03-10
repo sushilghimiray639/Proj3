@@ -215,7 +215,31 @@ footer .social-icon:hover {
   transform: scale(1.1);     
   filter: brightness(1.2);   
 }
+.skip-link {
+  position: absolute;
+  top: -40px; 
+  left: 0;
+  background: rgba(90, 50, 30, 0.95);
+  color: #fff;
+  padding: 8px 15px;
+  z-index: 100;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 4px;
+  transition: top 0.3s;
+}
+.skip-link:focus {
+  top: 10px; 
+}
 
+@media (max-width: 768px) {
+  nav.tab-desk {
+    display: none;
+  }
+  .mobile-nav {
+    display: flex;
+  }
+}
 @media (max-width: 480px) {
   footer .social-icon {
     width: 30px;
