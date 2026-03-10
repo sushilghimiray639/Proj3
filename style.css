@@ -218,23 +218,16 @@ footer .social-icon:hover {
 
 .skip-link {
   position: absolute;
-  top: -50px;                
+  top: 10px;                 
   left: 10px;
-  background: rgba(90, 50, 30, 0.95); 
-  color: #fff;                
-  text-decoration: none;      
+  background: rgba(90, 50, 30, 0.95);
+  color: #fff;
+  text-decoration: none;
   padding: 8px 15px;
   font-weight: bold;
   border-radius: 4px;
   z-index: 1000;
-  transition: top 0.3s ease, opacity 0.3s ease;
-  opacity: 0;                
-}
-
-.skip-link:focus {
-  top: 10px;                   
-  opacity: 1;                   
-  outline: 3px solid #f6eee4;  
+  opacity: 1;               
 }
 
 @media (max-width: 768px) {
