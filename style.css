@@ -5,21 +5,14 @@ body {
   margin: 0;
   font-family: 'Lora', serif;
   color: #fff;
-  background: url('https://cdn.britannica.com/80/157580-004-FFB75F13.jpg') no-repeat center center fixed;
+  background-image: url('https://cdn.britannica.com/80/157580-004-FFB75F13.jpg');
   background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
   min-height: 100vh;
 }
 
-/* Dark overlay to improve readability */
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  background-color: rgba(0,0,0,0.4);
-  z-index: -1;
-}
-
-/* Navbar brown color */
+/* Navbar brown */
 .bg-brown {
   background-color: #2a1f14 !important;
 }
@@ -33,20 +26,38 @@ body::before {
 }
 
 .hero-text {
-  background-color: rgba(0,0,0,0.35);
-  padding: 30px;
+  background-color: rgba(0, 0, 0, 0.3); /* slightly dark box for readability */
+  padding: 30px 40px;
   border-radius: 12px;
 }
 
 .hero-text h1 {
   font-size: 3rem;
+  font-weight: bold;
 }
 
 .hero-text p {
   font-size: 1.3rem;
+  margin-top: 10px;
+}
+
+/* Main content */
+main {
+  max-width: 900px;
+  margin: 50px auto;
 }
 
 /* Footer */
 footer {
   background-color: #2a1f14;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-text {
+    padding: 20px;
+  }
+  .hero-text h1 {
+    font-size: 2rem;
+  }
 }
