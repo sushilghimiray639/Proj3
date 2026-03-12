@@ -1,18 +1,17 @@
 // Shraddha Bijukchhe | script.js | 2026-03-12
 
-// Document ready
 document.addEventListener("DOMContentLoaded", function() {
   console.log("Wild Rescues site loaded");
 });
 
-// Hamburger menu toggle
+// Hamburger menu toggle (if needed)
 function hamburger() {
   const menu = document.getElementById("menu-links");
   if (!menu) return;
   menu.style.display = menu.style.display === "block" ? "none" : "block";
 }
 
-// FAQ toggle (if used)
+// FAQ toggle
 function toggleFAQ(element) {
   const answer = element.nextElementSibling;
   if (!answer) return;
