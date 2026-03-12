@@ -7,7 +7,7 @@
   box-sizing: border-box;
 }
 
-/* Body & background */
+/* Body background */
 body {
   font-family: "Lora", serif;
   color: #fff;
@@ -33,6 +33,7 @@ body::before {
   background-color: #2a1f14 !important;
 }
 
+/* Hero section */
 .hero {
   height: 80vh;
   display: flex;
@@ -40,22 +41,30 @@ body::before {
   justify-content: center;
   text-align: center;
   background: transparent;
+  position: relative;
+  z-index: 1;
 }
 
-.welcome .display-1 {
+.hero .welcome {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.hero .display-1 {
   font-size: 3rem;
   font-weight: bold;
 }
 
-.welcome p {
+.hero p {
   font-size: 1.3rem;
   margin-top: 10px;
 }
 
+/* Main content */
 main {
-  max-width: 900px;
-  margin: 50px auto;
-  background: transparent;
+  background: transparent !important;
+  margin-top: 30px;
 }
 
 main .overlay {
