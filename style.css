@@ -1,17 +1,21 @@
+
+
+/* Reset & box-sizing */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Body & background */
 body {
   font-family: "Lora", serif;
-  background-image: url("https://cdn.britannica.com/80/157580-004-FFB75F13.jpg"); /* squirrel image */
+  color: #fff;
+  line-height: 1.6;
+  background-image: url("https://cdn.britannica.com/80/157580-004-FFB75F13.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  color: #fff;
-  line-height: 1.6;
   position: relative;
 }
 
@@ -23,77 +27,44 @@ body::before {
   z-index: -1;
 }
 
-header {
-  text-align: center;
-  padding: 25px 10px;
-  background-color: rgba(70, 40, 20, 0.9);
+/* Custom classes */
+.bg-brown {
+  background-color: #2a1f14 !important;
 }
 
-header h1 {
-  font-family: "Emblema One", cursive;
-  font-size: 2.2rem;
-}
-
-header h3 {
-  font-weight: normal;
-  margin-top: 5px;
-  color: #f6eee4;
-}
-
-/* DESKTOP NAVIGATION */
-nav.tab-desk {
-  background-color: rgba(90, 55, 30, 0.9);
-}
-
-nav.tab-desk ul {
-  list-style: none;
+.hero {
+  position: relative;
+  height: 60vh;
   display: flex;
+  align-items: center;
   justify-content: center;
+  background: rgba(0, 0, 0, 0.3); /* subtle overlay if needed */
 }
 
-nav.tab-desk li {
-  padding: 15px 25px;
+.welcome {
+  position: absolute;
+  top: 40%;
+  width: 100%;
+  text-align: center;
 }
 
-nav.tab-desk a {
-  color: #fff;
-  text-decoration: none;
+.display-1 {
+  font-size: 4em;
   font-weight: bold;
 }
 
-nav.tab-desk a:hover {
+/* Navbar */
+.navbar-nav .nav-link {
+  font-weight: bold;
+}
+
+.navbar-nav .nav-link:hover {
   color: #f6eee4;
 }
 
-/* MOBILE NAVIGATION */
-.mobile-nav {
-  display: none;
-  flex-direction: column;
-  background-color: rgba(90, 55, 30, 0.9);
-  padding: 10px;
-}
-
-.mobile-nav .nav-icon {
-  font-size: 2rem;
-  color: #fff;
-  cursor: pointer;
-}
-
-#menu-links {
-  display: none;
-  flex-direction: column;
-  margin-top: 10px;
-}
-
-#menu-links a {
-  color: #fff;
-  padding: 8px 0;
-  text-decoration: none;
-  font-weight: bold;
-}
-
+/* Main content */
 main {
-  max-width: 850px;
+  max-width: 900px;
   margin: 50px auto;
   padding: 35px;
   background-color: rgba(255, 255, 255, 0.1);
@@ -103,8 +74,8 @@ main {
 
 main h2,
 main h3 {
-  color: #f6eee4;
   margin-bottom: 15px;
+  color: #f6eee4;
 }
 
 main p,
@@ -117,106 +88,32 @@ main ul {
   margin-left: 20px;
 }
 
-.video-container {
-  display: flex;
-  justify-content: center;
-  margin: 25px 0;
-}
-
-iframe {
-  width: 100%;
-  max-width: 600px;
-  height: 340px;
+main img {
+  max-width: 100%;
   border-radius: 10px;
-  border: none;
 }
 
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 20px 0;
-  color: #fff;
-}
-
-table th,
-table td {
-  border: 1px solid #fff;
-  padding: 12px;
-  text-align: left;
-}
-
-table th {
-  background-color: rgba(70, 40, 20, 0.9);
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-}
-
-form label {
-  margin-top: 15px;
-  margin-bottom: 5px;
-  font-weight: bold;
-  color: #f6eee4;
-}
-
-form input,
-form textarea,
-form button {
-  padding: 10px;
-  border-radius: 6px;
-  border: 1px solid #fff;
-  background-color: rgba(255, 255, 255, 0.1);
-  color: #fff;
-}
-
-form button {
-  margin-top: 20px;
-  background-color: rgba(70, 40, 20, 0.9);
-  font-weight: bold;
-  cursor: pointer;
-}
-
-form button:hover {
-  background-color: rgba(50, 30, 15, 0.9);
-}
-
-.faq-answer {
-  display: none;
-  margin-left: 15px;
-  margin-bottom: 15px;
-  cursor: default;
-}
-
+/* Footer */
 footer {
   text-align: center;
-  padding: 20px;
-  background-color: rgba(70, 40, 20, 0.9);
-  color: #fff;
+  padding: 40px 20px;
 }
 
-@media (max-width: 768px) {
-  nav.tab-desk {
-    display: none;
-  }
-  .mobile-nav {
-    display: flex;
-  }
-}
 footer .social-icon {
-  width: 40px;               
-  margin: 0 10px;            
+  width: 40px;
+  margin: 0 10px;
   vertical-align: middle;
-  transition: transform 0.2s, filter 0.2s; 
+  transition: transform 0.2s, filter 0.2s;
 }
 
 footer .social-icon:hover {
-  transform: scale(1.1);     
-  filter: brightness(1.2);   
+  transform: scale(1.1);
+  filter: brightness(1.2);
 }
+
+/* Skip link */
 .skip-link {
-  position: fixed;                  
+  position: fixed;
   top: 10px;
   left: 10px;
   background: rgba(90, 50, 30, 0.95);
@@ -230,14 +127,7 @@ footer .social-icon:hover {
   transition: top 0.3s ease, opacity 0.3s ease;
 }
 
-@media (max-width: 768px) {
-  nav.tab-desk {
-    display: none;
-  }
-  .mobile-nav {
-    display: flex;
-  }
-}
+/* Responsive */
 @media (max-width: 480px) {
   footer .social-icon {
     width: 30px;
