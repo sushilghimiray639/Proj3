@@ -1,6 +1,6 @@
 /* Shraddha Bijukchhe | styles.css | 2026-03-12 */
 
-/* Body with background image */
+/* Body with full background image */
 body {
   margin: 0;
   font-family: 'Lora', serif;
@@ -12,7 +12,16 @@ body {
   min-height: 100vh;
 }
 
-/* Navbar brown */
+/* Dark overlay */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.35);
+  z-index: -1;
+}
+
+/* Navbar color */
 .bg-brown {
   background-color: #2a1f14 !important;
 }
@@ -26,8 +35,8 @@ body {
 }
 
 .hero-text {
-  background-color: rgba(0, 0, 0, 0.3); /* slightly dark box for readability */
-  padding: 30px 40px;
+  background-color: rgba(0, 0, 0, 0.35);
+  padding: 40px;
   border-radius: 12px;
 }
 
@@ -41,18 +50,29 @@ body {
   margin-top: 10px;
 }
 
-/* Main content */
-main {
-  max-width: 900px;
-  margin: 50px auto;
+/* Main content styling */
+main h2 {
+  margin-bottom: 15px;
 }
 
-/* Footer */
-footer {
-  background-color: #2a1f14;
+main p,
+main li {
+  color: #fff;
+  margin-bottom: 10px;
 }
 
-/* Responsive */
+/* Footer social icons */
+footer .social-icon {
+  width: 40px;
+  margin: 0 10px;
+  transition: transform 0.2s;
+}
+
+footer .social-icon:hover {
+  transform: scale(1.1);
+}
+
+/* Responsive adjustments */
 @media (max-width: 768px) {
   .hero-text {
     padding: 20px;
