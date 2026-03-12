@@ -1,6 +1,6 @@
+/* Shraddha Bijukchhe | styles.css | 2026-03-12 */
 
-
-/* Reset & box-sizing */
+/* Reset */
 * {
   margin: 0;
   padding: 0;
@@ -16,6 +16,7 @@ body {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+  min-height: 100vh;
   position: relative;
 }
 
@@ -23,7 +24,7 @@ body::before {
   content: "";
   position: fixed;
   inset: 0;
-  background: rgba(90, 50, 30, 0.45); /* semi-transparent overlay */
+  background: rgba(0, 0, 0, 0.35);
   z-index: -1;
 }
 
@@ -33,19 +34,15 @@ body::before {
 }
 
 .hero {
-  height: 80vh; /* full hero height */
+  height: 80vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
   text-align: center;
+  background: transparent;
 }
 
-.welcome {
-  color: #fff;
-}
-
-.display-1 {
+.welcome .display-1 {
   font-size: 3rem;
   font-weight: bold;
 }
@@ -55,42 +52,28 @@ body::before {
   margin-top: 10px;
 }
 
-.welcome .btn {
-  margin-top: 20px;
-}
-
-/* Navbar */
-.navbar-nav .nav-link {
-  font-weight: bold;
-}
-
-.navbar-nav .nav-link:hover {
-  color: #f6eee4;
-}
-
-/* Main content */
 main {
   max-width: 900px;
   margin: 50px auto;
-  padding: 30px;
-  background-color: rgba(0, 0, 0, 0.3); /* slight dark overlay for readability */
+  background: transparent;
+}
+
+main .overlay {
+  background: rgba(0, 0, 0, 0.25);
+  padding: 20px;
   border-radius: 12px;
 }
 
 main h2,
 main h3 {
-  margin-bottom: 15px;
   color: #f6eee4;
+  margin-bottom: 15px;
 }
 
 main p,
 main li {
   color: #fff;
   margin-bottom: 15px;
-}
-
-main ul {
-  margin-left: 20px;
 }
 
 main img {
@@ -100,10 +83,10 @@ main img {
 
 /* Footer */
 footer {
-  text-align: center;
-  padding: 40px 20px;
   background-color: #2a1f14;
   color: #fff;
+  text-align: center;
+  padding: 40px 20px;
 }
 
 footer .social-icon {
@@ -134,7 +117,7 @@ footer .social-icon:hover {
   transition: top 0.3s ease, opacity 0.3s ease;
 }
 
-/* Responsive adjustments */
+/* Responsive */
 @media (max-width: 480px) {
   footer .social-icon {
     width: 30px;
