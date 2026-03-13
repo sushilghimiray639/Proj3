@@ -1,70 +1,185 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <title>Wild Rescues | FAQs</title>
-    <meta name="description" content="Find answers to frequently asked questions about Wild Rescues, including wildlife rescue services, volunteering, and how animals are rehabilitated and released.">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <script src="js/script.js" defer></script>
-  </head>
-  <body>
-    <a href="#main-content" class="skip-link">Skip to Content</a>
-    <header>
-      <h1>🐾 Wild Rescues</h1>
-      <h3>Frequently Asked Questions</h3>
-    </header>
+    <!-- Shraddha Bijukchhe | 2026-03-12 -->
 
-    <nav class="mobile-nav">
-      <div class="nav-icon" onclick="hamburger()">&#9776;</div>
-      <div id="menu-links">
-        <a href="index.html">About</a>
-        <a href="partnership.html">Partnership</a>
-        <a href="contact.html">Contact</a>
-        <a href="faqs.html">FAQs</a>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Wild Rescues | FAQs</title>
+
+    <meta
+      name="description"
+      content="Find answers to frequently asked questions about Wild Rescues, including wildlife rescue services, volunteering, and how animals are rehabilitated and released."
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-brown">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">🐾 Wild Rescues</a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="partnership.html">Partnership</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link active" href="faqs.html">FAQs</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </nav>
 
-    <nav class="tab-desk">
-      <ul>
-        <li><a href="index.html">About</a></li>
-        <li><a href="partnership.html">Partnership</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="faqs.html">FAQs</a></li>
-      </ul>
-    </nav>
+    <!-- Page Header -->
+    <header class="bg-brown text-white text-center p-5">
+      <h1>Frequently Asked Questions</h1>
+      <p>Learn more about wildlife rescue and how you can help</p>
+    </header>
 
-    <main>
-      <h2>FAQs</h2>
+    <!-- Main Content -->
+    <main class="container mt-5">
+      <h2 class="text-center mb-4">FAQs</h2>
 
-      <h3 onclick="toggleFAQ(this)">How can I report injured wildlife?</h3>
-      <p class="faq-answer">
-        You can contact us directly through our contact page or call our
-        emergency number.
-      </p>
+      <div class="accordion" id="faqAccordion">
+        <!-- Question 1 -->
 
-      <h3 onclick="toggleFAQ(this)">Can I volunteer?</h3>
-      <p class="faq-answer">
-        Yes! We welcome volunteers who are passionate about wildlife
-        conservation.
-      </p>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#faq1"
+            >
+              How can I report injured wildlife?
+            </button>
+          </h2>
 
-      <h3 onclick="toggleFAQ(this)">Do you accept donations?</h3>
-      <p class="faq-answer">
-        Absolutely. Donations help us provide medical care and safe
-        rehabilitation.
-      </p>
+          <div
+            id="faq1"
+            class="accordion-collapse collapse show"
+            data-bs-parent="#faqAccordion"
+          >
+            <div class="accordion-body">
+              You can contact us directly through our contact page or call our
+              emergency hotline. Our rescue team will guide you on how to safely
+              help the animal until assistance arrives.
+            </div>
+          </div>
+        </div>
+
+        <!-- Question 2 -->
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#faq2"
+            >
+              Can I volunteer?
+            </button>
+          </h2>
+
+          <div
+            id="faq2"
+            class="accordion-collapse collapse"
+            data-bs-parent="#faqAccordion"
+          >
+            <div class="accordion-body">
+              Yes! We welcome volunteers who are passionate about wildlife
+              conservation. Volunteers assist with animal care, habitat
+              maintenance, fundraising events, and community education.
+            </div>
+          </div>
+        </div>
+
+        <!-- Question 3 -->
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#faq3"
+            >
+              Do you accept donations?
+            </button>
+          </h2>
+
+          <div
+            id="faq3"
+            class="accordion-collapse collapse"
+            data-bs-parent="#faqAccordion"
+          >
+            <div class="accordion-body">
+              Absolutely. Donations help provide medical care, food, and safe
+              rehabilitation environments for injured wildlife before they are
+              released back into nature.
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
 
-    <footer>
-      <p>&copy; 2026 Wild Rescues. All rights reserved.</p>
-      <a href="https://www.facebook.com" target="_blank">
-    <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" class="social-icon">
-  </a>
+    <!-- Footer -->
 
-  <a href="https://www.instagram.com" target="_blank">
-    <img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" alt="Instagram" class="social-icon">
-  </a>
+    <footer class="bg-brown text-center text-white p-5 mt-5">
+      <p>&copy; 2026 Wild Rescues. All rights reserved.</p>
+
+      <a href="https://www.facebook.com" target="_blank">
+        <img
+          src="https://cdn-icons-png.flaticon.com/512/733/733547.png"
+          alt="Facebook"
+          class="social-icon"
+        />
+      </a>
+
+      <a href="https://www.instagram.com" target="_blank">
+        <img
+          src="https://cdn-icons-png.flaticon.com/512/733/733558.png"
+          alt="Instagram"
+          class="social-icon"
+        />
+      </a>
     </footer>
+
+    <!-- Bootstrap JS -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="js/script.js"></script>
   </body>
 </html>
